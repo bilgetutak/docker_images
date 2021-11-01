@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  ext-nw:
+    external:
+      name: ext-nw
+
+services:
+  alertd:
+    image: registry.sekomy.com/alertd:latest
+    hostname: alertd
+    container_name: alertd
+    networks:
+      - ext-nw
+    volumes:
+      - ./config:/app/config
+    ports:
+      - 8080:8080
+    restart: always
