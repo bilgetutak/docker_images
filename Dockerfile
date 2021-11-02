@@ -25,7 +25,7 @@ RUN /opt/conda/bin/conda install -yc conda-forge \
 
 RUN /opt/conda/bin/conda install -yc conda-forge \
     numpy scipy basemap basemap-data-hires cftime \
-    lpsolve55 pip
+    lpsolve55 pip pygridgen
 
 WORKDIR /opt/
 
@@ -35,6 +35,7 @@ RUN /opt/conda/bin/pip install -e pyroms/pyroms && \
     /opt/conda/bin/pip install -e pyroms/pyroms_toolbox && \
     /opt/conda/bin/pip install -e pyroms/bathy_smoother
 
+RUN cp /opt/conda/lib/libgridgen.* /opt/pyroms/pyroms/pyroms/.
 
 RUN echo "export DISPLAY=host.docker.internal:0.0" >> ~/.bashrc
 
