@@ -4,7 +4,7 @@ services:
   pyroms:
     # stdin_open: true
     # tty: true
-    image: bilgetutak/pyroms1:1
+    image: bilgetutak/pyroms1:2
     container_name: pyroms
     # ports:
     #   - 8080:8080
