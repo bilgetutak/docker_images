@@ -1,19 +1,14 @@
-version: '3'
-
-networks:
-  ext-nw:
-    external:
-      name: ext-nw
+version: "3"
 
 services:
-  alertd:
-    image: registry.sekomy.com/alertd:latest
-    hostname: alertd
-    container_name: alertd
-    networks:
-      - ext-nw
-    volumes:
-      - ./config:/app/config
-    ports:
-      - 8080:8080
-    restart: always
+  pyroms:
+    # stdin_open: true
+    # tty: true
+    image: bilgetutak/pyroms1:1
+    container_name: pyroms
+    # ports:
+    #   - 8080:8080
+    # environment:
+    # DISPLAY: -host.docker.internal:0.0
+
+    # command: /bin/bash

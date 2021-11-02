@@ -35,4 +35,9 @@ RUN /opt/conda/bin/pip install -e pyroms/pyroms && \
     /opt/conda/bin/pip install -e pyroms/pyroms_toolbox && \
     /opt/conda/bin/pip install -e pyroms/bathy_smoother
 
+
+RUN echo "export DISPLAY=host.docker.internal:0.0" >> ~/.bashrc
+
+
+
 CMD ["bash"]
