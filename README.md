@@ -14,3 +14,6 @@ Dockerfile for the image creation is given at github:
 
 https://github.com/bilgetutak/docker_images
 
+Docker image is available @
+
+https://hub.docker.com/r/bilgetutak/pyroms
